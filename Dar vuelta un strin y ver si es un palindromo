@@ -1,0 +1,30 @@
+// Metodo 1
+
+function reverse (palabra){
+  let a = palabra.split('')
+  a = a.reverse()
+  a = a.join('')
+  return a === palabra
+  }
+  
+  
+  
+  // Metodo 2
+  
+  function palabraSimetrica(palabra) {
+    let a = []
+    let b = []
+    for (i=0 ; i<palabra.length ; i++){
+      a.push(palabra[i])
+      b.push(palabra[i])
+    }
+    a.reverse()
+    let contador = 0
+    for(i=0 ; i<palabra.length ; i++){
+    if (a[i] === b[i]){
+      contador ++
+    }
+    }
+    return contador === palabra.length
+  }
+  
